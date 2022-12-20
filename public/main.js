@@ -31,7 +31,7 @@ btnGoRoom.onclick = ()=>{
         socket.emit('create or join',roomNumber)
         
         divSelectRoom.style='display:none'
-        divConsultingRoom.style='display:block'
+        divConsultingRoom.style='display:flex'
     }
 }
 

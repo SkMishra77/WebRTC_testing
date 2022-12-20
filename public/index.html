@@ -4,20 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>webRTC experiment</title>
+    <link rel="stylesheet" href="style.css">
+    <title>WebRTC PeerChat</title>
 </head>
 <body>
-    <h1>webRTC</h1>
-    <div id="selectRoom">
-        <label for="">Type Room Id</label>
-        <input type="text" id="roomNumber">
-        <button id="goRoom">Go</button>
-    </div>
-
-    <div id="consultingRoom" style="display: none;">
-        <video id="localVideo" autoplay></video>
-        <video id="remoteVideo" autoplay></video>
-
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="body-box">
+        <h1 id="root-logo">PeerChat WebRTC</h1>
+        <div id="selectRoom">
+            <label for="">Type Room Id : </label>
+            <input type="text" id="roomNumber" class="input__field" placeholder="RoomId" autocomplete="off">
+            <button id="goRoom">Go</button>
+        </div>
+    
+        <div id="consultingRoom" style="display: none;">
+            <div class="outer">
+                <video id="localVideo" autoplay></video>
+            </div> -->
+            <div class="outer">
+                <video id="remoteVideo" autoplay></video>
+            </div>
+    
+        </div>
     </div>
 
     <script src="/socket.io/socket.io.js"></script>

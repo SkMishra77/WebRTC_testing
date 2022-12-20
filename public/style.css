@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.body-box{
+    width: 100vw;
+    height: 100vh;
+}
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+
+.bg3 {
+    animation-duration:5s;
+}
+.content {
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    padding:10vmin;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+@keyframes slide {
+    0% {
+    transform:translateX(-25%);
+    }
+
+    100% {
+    transform:translateX(25%);
+    }
+}
+
+#root-logo{
+    padding: 10px;
+    font-family: 'Unbounded', cursive;
+}
+#selectRoom{
+    position: absolute;
+    left: 50%;
+    padding: 30px;
+    transform: translateX(-50%);
+}
+
+#selectRoom label{
+    font-size: 25px;
+    font-family: 'Baloo 2', cursive;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.input__field{
+    font-size: 25px;
+    font-family: 'Baloo 2', cursive;
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid black;
+    height: 20px;
+    width: 170px;
+    margin-left: 20px;
+    text-align: center;
+}
+.input__field:focus{
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid black;
+    height: 20px;
+    outline: none;
+    font-size: 25px;
+    font-family: 'Baloo 2', cursive;
+}
+
+#goRoom{
+    font-family: 'Chivo Mono', monospace;
+    letter-spacing: 2px;
+    height: 25px;
+    border: black 1px solid;
+    border-radius: 4px;
+    width: 5rem;
+    color: #000;
+    background-color: #aaa;
+    opacity: 0.5;
+}
+
+ #goRoom:hover{
+    opacity: 1;
+    font-weight: 700;
+}
+#outer {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    gap: 50px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+#localVideo{
+    position: absolute;
+    bottom: 7%;
+    left: 3%;
+    border-radius: 10px;
+}
+#remoteVideo{
+    position: absolute; 
+     bottom: 7%;
+    right: 3%;
+    border-radius: 10px;
+} 
